@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 html,
@@ -24,15 +23,36 @@ body,
   padding: 0px;
 }
 
+.login-page,
+.register-page,
+.welcome-page {
+    width: 100%;
+    height: 100vh;
+    background: #f4f7f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.login-card,
+.register-card,
 .welcome-card {
-  width: 100vw;
-  height: 120vh;
-  max-width: 1500px;
-  background: white;
-  border-radius: 16px;
-  display: flex;
-  overflow: hidden;
-  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background: white;
+    display: flex;
+    overflow: hidden;
+}
+
+.login-card,
+.register-card,
+.welcome-card{
+    width:98%;
+    height:98%;
+    border-radius:18px;
 }
 
 /* LEFT */
@@ -414,4 +434,68 @@ body,
 .loginText {
   margin-top: 12px;
   font-size: 15px;
+}
+
+.loginLink {
+  color: #668b61;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+.welcome-card {
+  margin-top: -10px;
+}
+
+.left {
+  padding: 35px 45px;
+}
+
+.right {
+  padding: 30px 60px;
+}
+
+.content {
+  margin-top: 42px;
+}
+
+.content h1 {
+  font-size: 40px;
+}
+
+.leftTitle {
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin: 12px 0 20px;
+}
+
+.feature {
+  margin-bottom: 17px;
+}
+
+.iconBox {
+  min-width: 50px;
+  height: 50px;
+}
+
+.primaryBtn,
+.outlineBtn {
+  height: 48px;
+}
+
+.loginText {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.illustration {
+  bottom: 15px;
+  height: 230px;
 }

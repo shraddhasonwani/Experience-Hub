@@ -8,6 +8,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import "../Styles/WelcomePage.css";
+import { Link } from "react-router-dom";
+
 
 const WelcomePage = () => {
   return (
@@ -84,11 +86,16 @@ const WelcomePage = () => {
               title="Connect & Collaborate"
               text="Engage in consultations and create real impact"
             />
+            <br />
+            <br />
+            <br/>
+            <br/>
+            
 
-            <button className="primaryBtn">
-              <span>Get Started</span>
-              <ArrowRight size={24} />
-            </button>
+            <Link to="/register" className="primaryBtn">
+  <span>Get Started</span>
+  <ArrowRight size={24} />
+</Link>
 
             <button className="outlineBtn">
               <Building2 size={22} />
@@ -96,8 +103,11 @@ const WelcomePage = () => {
             </button>
 
             <p className="loginText">
-              Already have an account? <span>Login</span>
-            </p>
+  Already have an account?{" "}
+  <Link to="/login" className="loginLink">
+    Login
+  </Link>
+</p>
           </div>
         </div>
       </div>
