@@ -8,6 +8,7 @@ import {
   Check,
 } from "lucide-react";
 import "../Styles/LoginPage.css";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -83,7 +84,9 @@ const LoginPage = () => {
                   <span>Remember me</span>
                 </div>
 
-                <span className="forgot">Forgot Password?</span>
+                <Link to="/forgot-password" className="forgot">
+  Forgot Password?
+</Link>
               </div>
 
               <button type="submit" className="loginBtn">

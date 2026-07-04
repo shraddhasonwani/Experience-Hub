@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.otp-page {
+  width: 100vw;
+  height: 100vh;
+  background: #f4f7f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otp-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  overflow: hidden;
+}
+
+.otp-left {
+  width: 45%;
+  background: linear-gradient(135deg, #f4f8f1, #eef5ec);
+  padding: 42px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.otp-logoBox {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.otp-logo {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #6f9569, #dbe8d6);
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-logoBox h2 {
+  font-size: 32px;
+  color: #111;
+}
+
+.otp-logoBox h2 span,
+.otp-leftText span,
+.otp-subtitle span,
+.otp-resend span {
+  color: #668b61;
+}
+
+.otp-logoBox p {
+  color: #555b62;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.otp-leftText {
+  margin-top: 82px;
+  position: relative;
+  z-index: 5;
+}
+
+.otp-leftText h1 {
+  font-size: 38px;
+  line-height: 1.35;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.otp-leftText p {
+  font-size: 20px;
+  line-height: 1.45;
+  color: #555b62;
+}
+
+.otp-line {
+  width: 70px;
+  height: 4px;
+  background: #668b61;
+  margin-top: 28px;
+}
+
+.otp-dots {
+  position: absolute;
+  left: 70px;
+  top: 510px;
+  width: 82px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  z-index: 5;
+}
+
+.otp-dots span {
+  width: 9px;
+  height: 9px;
+  background: #d6e2d2;
+  border-radius: 50%;
+}
+
+.otp-illustration {
+  position: absolute;
+  bottom: 55px;
+  left: 55px;
+  right: 35px;
+  height: 330px;
+}
+
+.otp-girl {
+  position: absolute;
+  left: 190px;
+  bottom: 20px;
+  width: 185px;
+  height: 220px;
+  background: #dce9d6;
+  border-radius: 95px 95px 30px 30px;
+  border: 2px solid #b8c8b2;
+}
+
+.otp-girl::before {
+  content: "";
+  position: absolute;
+  top: -66px;
+  left: 44px;
+  width: 96px;
+  height: 96px;
+  background: #f4c29b;
+  border-radius: 50%;
+  border: 2px solid #c99978;
+  z-index: 2;
+}
+
+.otp-girl::after {
+  content: "";
+  position: absolute;
+  top: -88px;
+  left: 25px;
+  width: 135px;
+  height: 120px;
+  background: #2d211d;
+  border-radius: 78px 78px 45px 45px;
+  z-index: 1;
+}
+
+.otp-phone {
+  position: absolute;
+  left: 330px;
+  bottom: 130px;
+  width: 45px;
+  height: 80px;
+  background: #4f5661;
+  border-radius: 10px;
+  transform: rotate(-18deg);
+  z-index: 6;
+}
+
+.otp-mailBubble {
+  position: absolute;
+  left: 390px;
+  bottom: 185px;
+  width: 115px;
+  height: 95px;
+  border: 1.5px solid #c9d0c5;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 55%;
+  color: #668b61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.otp-mailBubble span {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background: #668b61;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.otp-plant {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 80px;
+  background: #d9d9d9;
+  border-radius: 0 0 20px 20px;
+}
+
+.otp-cup {
+  position: absolute;
+  right: 85px;
+  bottom: 5px;
+  width: 55px;
+  height: 65px;
+  background: #85a879;
+  border-radius: 0 0 18px 18px;
+}
+
+.otp-book {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  width: 115px;
+  height: 22px;
+  background: #d9d9d9;
+  border-radius: 4px;
+}
+
+.otp-right {
+  width: 55%;
+  padding: 48px 80px;
+  position: relative;
+}
+
+.otp-language {
+  position: absolute;
+  top: 55px;
+  right: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+  font-size: 20px;
+}
+
+.otp-formBox {
+  width: 100%;
+  max-width: 610px;
+  margin: 105px auto 0;
+}
+
+.otp-iconCircle {
+  width: 120px;
+  height: 120px;
+  background: #eef4eb;
+  color: #668b61;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.otp-formBox h1 {
+  font-size: 46px;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.otp-subtitle {
+  font-size: 20px;
+  line-height: 1.45;
+  color: #555b62;
+  margin-bottom: 42px;
+}
+
+.otp-subtitle span {
+  font-weight: 600;
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 26px;
+  margin-bottom: 36px;
+}
+
+.otp-inputs input {
+  width: 78px;
+  height: 78px;
+  border: 1.5px solid #c9d0c5;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 28px;
+  outline: none;
+}
+
+.otp-inputs input:focus {
+  border-color: #668b61;
+  box-shadow: 0 0 0 3px rgba(102, 139, 97, 0.15);
+}
+
+.otp-resend {
+  font-size: 17px;
+  color: #555b62;
+  margin-bottom: 36px;
+}
+
+.otp-resend span {
+  font-weight: 700;
+}
+
+.otp-submitBtn {
+  width: 100%;
+  height: 66px;
+  background: #668b61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  cursor: pointer;
+}
+
+.otp-divider {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 36px 0 28px;
+  color: #777;
+  font-size: 18px;
+}
+
+.otp-divider span {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.otp-backBtn {
+  width: 100%;
+  height: 62px;
+  border: 1.6px solid #668b61;
+  border-radius: 8px;
+  color: #668b61;
+  background: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.otp-secure {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #555b62;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.otp-secure div {
+  width: 56px;
+  height: 56px;
+  background: #eef4eb;
+  color: #668b61;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* small screen */
+
+@media (max-height: 820px) {
+  .otp-left {
+    padding: 30px 60px;
+  }
+
+  .otp-leftText {
+    margin-top: 58px;
+  }
+
+  .otp-leftText h1 {
+    font-size: 34px;
+  }
+
+  .otp-leftText p {
+    font-size: 18px;
+  }
+
+  .otp-illustration {
+    height: 270px;
+    bottom: 25px;
+  }
+
+  .otp-formBox {
+    margin-top: 62px;
+  }
+
+  .otp-iconCircle {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 22px;
+  }
+
+  .otp-formBox h1 {
+    font-size: 40px;
+  }
+
+  .otp-subtitle {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  .otp-inputs {
+    gap: 20px;
+    margin-bottom: 26px;
+  }
+
+  .otp-inputs input {
+    width: 66px;
+    height: 66px;
+  }
+
+  .otp-resend {
+    margin-bottom: 26px;
+  }
+
+  .otp-submitBtn {
+    height: 56px;
+  }
+
+  .otp-divider {
+    margin: 26px 0 18px;
+  }
+
+  .otp-backBtn {
+    height: 54px;
+  }
+
+  .otp-secure {
+    margin-top: 22px;
+  }
+}
+
+.otp-card {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.otp-left,
+.otp-right {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.otp-right {
+  padding: 25px 80px;
+}
+
+.otp-language {
+  top: 38px;
+}
+
+.otp-formBox {
+  margin-top: 55px;
+}
+
+.otp-iconCircle {
+  width: 82px;
+  height: 82px;
+  margin-bottom: 18px;
+}
+
+.otp-iconCircle svg {
+  width: 42px;
+  height: 42px;
+}
+
+.otp-formBox h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.otp-subtitle {
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.otp-inputs {
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.otp-inputs input {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+}
+
+.otp-resend {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.otp-submitBtn {
+  height: 54px;
+  font-size: 18px;
+}
+
+.otp-divider {
+  margin: 22px 0 16px;
+}
+
+.otp-backBtn {
+  height: 50px;
+  font-size: 17px;
+}
+
+.otp-secure {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.otp-secure div {
+  width: 46px;
+  height: 46px;
+}
+
+/* left side bhi compact */
+.otp-left {
+  padding: 30px 60px;
+}
+
+.otp-leftText {
+  margin-top: 58px;
+}
+
+.otp-leftText h1 {
+  font-size: 34px;
+}
+
+.otp-leftText p {
+  font-size: 17px;
+}
+
+.otp-dots {
+  top: 500px;
+}
+
+.otp-illustration {
+  bottom: 25px;
+  height: 270px;
+}
