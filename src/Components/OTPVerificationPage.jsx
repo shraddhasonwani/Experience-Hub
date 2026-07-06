@@ -113,10 +113,10 @@ const OTPVerificationPage = () => {
               <span>Resend Code (00:45)</span>
             </p>
 
-            <button className="otp-submitBtn">
-              <span>Verify & Continue</span>
-              <ArrowRight size={28} />
-            </button>
+            <Link to="/reset-password" className="otp-submitBtn">
+  <span>Verify & Continue</span>
+  <ArrowRight size={28} />
+</Link>
 
             <div className="otp-divider">
               <span></span>

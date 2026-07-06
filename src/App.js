@@ -4,6 +4,9 @@ import LoginPage from "./Components/LoginPage";
 import RegisterPage from "./Components/RegisterPage";
 import ForgotPasswordPage from "./Components/ForgotPasswordPage";
 import OTPVerificationPage from "./Components/OTPVerificationPage";
+import ResetPasswordPage from "./Components/ResetPasswordPage";
+import PasswordResetSuccessPage from "./Components/PasswordResetSuccessPage";
+import DashboardPage from "./Components/DashboardPage";
 
 
 function App() {
@@ -14,6 +17,9 @@ function App() {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/otp-verification" element={<OTPVerificationPage />} />
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
+      <Route path="/password-reset-success" element={<PasswordResetSuccessPage />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
     </Routes>
   );
 }

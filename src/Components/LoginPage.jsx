@@ -89,10 +89,10 @@ const LoginPage = () => {
 </Link>
               </div>
 
-              <button type="submit" className="loginBtn">
-                <span>Log In</span>
-                <ArrowRight size={28} />
-              </button>
+              <Link to="/dashboard" className="loginBtn">
+  <span>Log In</span>
+  <ArrowRight size={28} />
+</Link>
             </form>
 
             <div className="divider">
