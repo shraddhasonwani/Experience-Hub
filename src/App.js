@@ -7,6 +7,7 @@ import OTPVerificationPage from "./Components/OTPVerificationPage";
 import ResetPasswordPage from "./Components/ResetPasswordPage";
 import PasswordResetSuccessPage from "./Components/PasswordResetSuccessPage";
 import DashboardPage from "./Components/DashboardPage";
+import OpportunitiesPage from "./Components/OpportunitiesPage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route path="/password-reset-success" element={<PasswordResetSuccessPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
+      <Route path="/opportunities" element={<OpportunitiesPage />} />
     </Routes>
   );
 }
