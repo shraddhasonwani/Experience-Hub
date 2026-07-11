@@ -8,6 +8,7 @@ import ResetPasswordPage from "./Components/ResetPasswordPage";
 import PasswordResetSuccessPage from "./Components/PasswordResetSuccessPage";
 import DashboardPage from "./Components/DashboardPage";
 import OpportunitiesPage from "./Components/OpportunitiesPage";
+import CalendarPage from "./Components/CalendarPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/password-reset-success" element={<PasswordResetSuccessPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/opportunities" element={<OpportunitiesPage />} />
+      <Route path="/calendar" element={<CalendarPage />} />
     </Routes>
   );
 }
