@@ -35,25 +35,9 @@ button {
 
 /* Sidebar */
 
-.calendar-sidebar {
-  width: 300px;
-  min-width: 300px;
-  min-height: 100vh;
-  padding: 26px 22px;
-  background: #ffffff;
-  border-right: 1px solid #e2e7e0;
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-  overflow-y: auto;
-}
 
-.calendar-logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 34px;
-}
+
+
 
 .calendar-logoMark {
   width: 60px;
@@ -85,23 +69,6 @@ button {
   white-space: nowrap;
 }
 
-.calendar-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.calendar-menuItem {
-  min-height: 44px;
-  padding: 0 14px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-radius: 9px;
-  color: #37404c;
-  font-size: 15px;
-  cursor: pointer;
-}
 
 .calendar-menuItem svg {
   width: 20px;
@@ -131,16 +98,6 @@ button {
   height: 1px;
   margin: 11px 0;
   background: #e2e6e0;
-}
-
-.calendar-promo {
-  margin-top: 24px;
-  padding: 18px;
-  display: flex;
-  align-items: flex-end;
-  gap: 15px;
-  border-radius: 12px;
-  background: #f3f7f0;
 }
 
 .calendar-plant {

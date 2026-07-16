@@ -1,10 +1,11 @@
 import React from "react";
 import {
-  Search, Bell, ChevronDown, Home, Briefcase, FileText, MessageCircle,
-  Bookmark, User, Star, PieChart, BookOpen, HelpCircle, Settings, LogOut,
+  Search, Bell, ChevronDown,
+  Bookmark,
   MapPin, CheckCircle, Leaf, Code, Users, Pencil, Heart
 } from "lucide-react";
 import "../Styles/OpportunitiesPage.css";
+import Sidebar from "./Sidebar";
 
 const jobs = [
   {
@@ -67,43 +68,7 @@ const jobs = [
 const OpportunitiesPage = () => {
   return (
     <div className="opp-page">
-      <aside className="opp-sidebar">
-        <div className="opp-logoBox">
-          <div className="opp-logo">M</div>
-          <div>
-            <h2>Experience<span>Hub</span></h2>
-            <p>Share Experience. Create Impact.</p>
-          </div>
-        </div>
-
-        <nav className="opp-menu">
-          <Menu icon={<Home />} text="Dashboard" />
-          <Menu icon={<Briefcase />} text="Opportunities" active />
-          <div className="sub-menu">
-            <p className="active-dot">Browse Opportunities</p>
-            <p>My Applications</p>
-          </div>
-          <Menu icon={<MessageCircle />} text="Messages" badge="2" />
-          <Menu icon={<Bookmark />} text="Saved" />
-          <Menu icon={<User />} text="My Profile" />
-          <Menu icon={<Star />} text="Skills" />
-          <Menu icon={<PieChart />} text="Analytics" />
-          <div className="opp-divider"></div>
-          <Menu icon={<BookOpen />} text="Resources" />
-          <Menu icon={<HelpCircle />} text="Help Center" />
-          <Menu icon={<Settings />} text="Settings" />
-          <Menu icon={<LogOut />} text="Logout" />
-        </nav>
-
-        <div className="opp-impact">
-          <div className="opp-plant"></div>
-          <div>
-            <h4>Make an impact</h4>
-            <p>Share your skills and help others grow.</p>
-            <button>Explore Opportunities</button>
-          </div>
-        </div>
-      </aside>
+      <Sidebar />
 
       <main className="opp-main">
         <header className="opp-header">
@@ -202,14 +167,6 @@ const OpportunitiesPage = () => {
     </div>
   );
 };
-
-const Menu = ({ icon, text, active, badge }) => (
-  <div className={`opp-menuItem ${active ? "active" : ""}`}>
-    {icon}
-    <span>{text}</span>
-    {badge && <b>{badge}</b>}
-  </div>
-);
 
 const OpportunityCard = ({ job, index }) => (
   <div className="opp-card">

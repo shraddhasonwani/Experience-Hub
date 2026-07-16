@@ -1,0 +1,151 @@
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:280px;
+    height:100vh;
+    background:#fff;
+    border-right:1px solid #e5e7eb;
+    /* padding:24px 20px; */
+    /* display:flex; */
+    /* flex-direction:column; */
+    overflow-y:auto;
+    z-index:1000;
+}
+
+.dash-logoBox{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:35px;
+}
+
+.dash-logo{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    background:#668b61;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.dash-logoBox h2{
+    font-size:24px;
+}
+
+.dash-logoBox span{
+    color:#668b61;
+}
+
+.dash-logoBox p{
+    font-size:12px;
+    color:#777;
+}
+
+.side-menu{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#374151;
+    transition:.3s;
+    font-weight:500;
+}
+
+.menu-item:hover{
+    background:#f3f7f2;
+}
+
+.menu-item.active{
+    background:#edf4ea;
+    color:#668b61;
+    font-weight:700;
+}
+
+.side-divider{
+    height:1px;
+    background:#e5e7eb;
+    margin:15px 0;
+}
+
+.logout-btn{
+    margin-top:10px;
+    border:none;
+    background:none;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    cursor:pointer;
+    border-radius:12px;
+    font-size:15px;
+    color:#374151;
+}
+
+.logout-btn:hover{
+    background:#ffeaea;
+    color:#d11a2a;
+}
+
+.impact-card{
+    margin-top:auto;
+    background:#f3f8f2;
+    border-radius:14px;
+    padding:18px;
+    text-align:center;
+}
+
+.plant-img{
+    width:80px;
+    height:80px;
+    margin:auto;
+    border-radius:50%;
+    background:#d8e8d4;
+    margin-bottom:15px;
+}
+
+.impact-card h4{
+    margin-bottom:8px;
+}
+
+.impact-card p{
+    font-size:13px;
+    color:#666;
+    margin-bottom:15px;
+}
+
+.impact-card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#668b61;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.impact-card button:hover{
+    background:#557552;
+}
+
+@media(max-width:900px){
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+}

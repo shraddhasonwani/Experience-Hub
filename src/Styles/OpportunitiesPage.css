@@ -21,35 +21,6 @@ body,
   overflow: hidden;
 }
 
-.opp-sidebar {
-  width: 315px;
-  height: 100vh;
-  background: #fff;
-  padding: 28px 24px;
-  border-right: 1px solid #e5e8e3;
-  overflow: hidden;
-}
-
-.opp-logoBox {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.opp-logo {
-  width: 65px;
-  height: 65px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #6f9569, #dbe8d6);
-  color: #fff;
-  font-size: 38px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .opp-logoBox h2 {
   font-size: 24px;
 }
@@ -64,23 +35,7 @@ body,
   margin-top: 4px;
 }
 
-.opp-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
 
-.opp-menuItem {
-  height: 48px;
-  padding: 0 16px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  color: #333947;
-  font-size: 16px;
-  position: relative;
-}
 
 .opp-menuItem svg {
   width: 21px;
@@ -106,14 +61,6 @@ body,
   justify-content: center;
 }
 
-.sub-menu {
-  margin: 0 0 12px 55px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  color: #555b62;
-  font-size: 14px;
-}
 
 .sub-menu p {
   position: relative;
@@ -122,34 +69,6 @@ body,
 .sub-menu p::before {
   content: "•";
   margin-right: 14px;
-}
-
-.sub-menu .active-dot {
-  color: #668b61;
-  font-weight: 700;
-}
-
-.opp-divider {
-  height: 1px;
-  background: #e1e4df;
-  margin: 12px 0;
-}
-
-.opp-impact {
-  margin-top: 28px;
-  background: #f4f8f1;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.opp-plant {
-  width: 75px;
-  height: 100px;
-  background: #d9d9d9;
-  border-radius: 0 0 25px 25px;
 }
 
 .opp-impact h4 {
@@ -173,13 +92,23 @@ body,
   font-weight: 600;
 }
 
+.left-content{
+    width:100%;
+    min-width:0;
+}
+
 /* MAIN */
 
-.opp-main {
-  flex: 1;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 26px 35px;
+.opp-listArea{
+    min-width:0;
+    width:100%;
+}
+
+.opp-main{
+    flex:1;
+    width:calc(100% - 280px);
+    overflow-y:auto;
+    /* padding:26px 35px; */
 }
 
 .opp-header {
@@ -250,10 +179,12 @@ body,
   margin-bottom: 28px;
 }
 
-.opp-content {
-  display: grid;
-  grid-template-columns: 1fr 315px;
-  gap: 25px;
+.opp-content{
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:24px;
+    align-items:start;
+    width:100%;
 }
 
 /* TABS */
@@ -303,21 +234,19 @@ body,
 
 /* JOB CARD */
 
-.job-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.job-list{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.opp-card {
-  background: white;
-  border: 1px solid #e0e5de;
-  border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 64px 1fr 150px 50px;
-  gap: 18px;
-  align-items: center;
+.opp-card{
+    width:100%;
+    display:grid;
+    grid-template-columns:70px minmax(0,1fr) 130px 55px;
+    gap:20px;
+    align-items:center;
 }
 
 .opp-jobIcon {
@@ -355,6 +284,10 @@ body,
   background: #f15b8a;
 }
 
+.opp-jobInfo{
+    min-width:0;
+}
+
 .opp-jobInfo h3 {
   font-size: 18px;
   margin-bottom: 6px;
@@ -377,11 +310,8 @@ body,
   margin-top: 8px;
 }
 
-.opp-jobInfo .desc {
-  margin-top: 10px;
-  line-height: 1.5;
-  color: #333947;
-  font-size: 14px;
+.opp-jobInfo .desc{
+    word-break:break-word;
 }
 
 .opp-status {
@@ -431,12 +361,10 @@ body,
 
 /* FILTER */
 
-.filter-panel {
-  background: white;
-  border: 1px solid #e0e5de;
-  border-radius: 12px;
-  padding: 22px;
-  height: fit-content;
+.filter-panel{
+    width:320px;
+    position:sticky;
+    top:20px;
 }
 
 .filter-head {
@@ -519,4 +447,17 @@ body,
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+@media(max-width:1100px){
+
+.opp-content{
+    grid-template-columns:1fr;
+}
+
+.filter-panel{
+    width:100%;
+    position:static;
+}
+
 }

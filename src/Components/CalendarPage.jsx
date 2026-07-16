@@ -1,23 +1,11 @@
 import React from "react";
 import {
   Bell,
-  BookOpen,
-  Briefcase,
   CalendarDays,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  CircleHelp,
-  FileText,
-  Home,
-  LogOut,
-  MessageCircle,
   Plus,
-  Settings,
-  Star,
-  UserCircle,
-  Bookmark,
-  PieChart,
   Video,
 } from "lucide-react";
 import "../Styles/CalendarPage.css";
@@ -76,56 +64,6 @@ const days = [
 const CalendarPage = () => {
   return (
     <div className="calendar-page">
-      <aside className="calendar-sidebar">
-        <div className="calendar-logo">
-          <div className="calendar-logoMark">M</div>
-
-          <div>
-            <h2>
-              Experience<span>Hub</span>
-            </h2>
-            <p>Share Experience. Create Impact.</p>
-          </div>
-        </div>
-
-        <nav className="calendar-menu">
-          <MenuItem icon={<Home />} text="Dashboard" />
-          <MenuItem icon={<Briefcase />} text="Opportunities" />
-          <MenuItem icon={<FileText />} text="My Applications" />
-          <MenuItem icon={<UserCircle />} text="My Consultations" />
-          <MenuItem icon={<CalendarDays />} text="Calendar" active />
-          <MenuItem icon={<MessageCircle />} text="Messages" badge="2" />
-          <MenuItem icon={<Bookmark />} text="Saved" />
-          <MenuItem icon={<UserCircle />} text="My Profile" />
-          <MenuItem icon={<Star />} text="Skills" />
-          <MenuItem icon={<PieChart />} text="Analytics" />
-
-          <div className="calendar-menuDivider"></div>
-
-          <MenuItem icon={<BookOpen />} text="Resources" />
-          <MenuItem icon={<CircleHelp />} text="Help Center" />
-          <MenuItem icon={<Settings />} text="Settings" />
-          <MenuItem icon={<LogOut />} text="Logout" />
-        </nav>
-
-        <div className="calendar-promo">
-          <div className="calendar-plant"></div>
-
-          <div>
-            <h4>Stay on track</h4>
-            <p>
-              Never miss a session.
-              <br />
-              Sync your calendar.
-            </p>
-
-            <button>
-              <CalendarDays size={16} />
-              Connect Calendar
-            </button>
-          </div>
-        </div>
-      </aside>
 
       <main className="calendar-main">
         <header className="calendar-topbar">
@@ -265,13 +203,7 @@ const CalendarPage = () => {
   );
 };
 
-const MenuItem = ({ icon, text, active, badge }) => (
-  <div className={`calendar-menuItem ${active ? "active" : ""}`}>
-    {icon}
-    <span>{text}</span>
-    {badge && <b>{badge}</b>}
-  </div>
-);
+
 
 const CalendarCell = ({ day }) => {
   const events = !day.muted ? calendarEvents[day.date] || [] : [];
